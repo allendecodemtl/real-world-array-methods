@@ -1523,20 +1523,27 @@ function anyRain2(){
                    return item.summary === "Rain"; 
                 })
                 
-                if (temp === -1){
-                    return false;
-                } 
-                else {
-                    return true;
-                }
+    if (temp === -1){
+        return false;
+    } 
+    else {
+        return true;
+    }
 }
-console.log(anyRain2())
+console.log(anyRain2());
 
 
 // Using the appropriate array method, start with the hourly data and return an array of only the temperatures. 
 // Your returned array should have the same number of elements as the original array.
 
-var temp2 
+var listOfTemp = weatherMsg.hourly.data.map(function(item){
+                    return item.temperature;
+                  });
+                  
+console.log(listOfTemp);
+
+
+
 
 
 
