@@ -1548,7 +1548,6 @@ console.log(listOfTemp);
 // Eliminate any item where it is not raining.
 // Extract the time from the remaining items and create a Date object
 
-
 var willRain = weatherMsg.hourly.data.filter(function(item){
     return item.summary === "Rain";
 }).map(function(item){
@@ -1560,3 +1559,14 @@ console.log(willRain);
 
 // Using the appropriate array method, start with the daily data and figure out whether it will be sunny every day of the week. 
 // Use the summary and check if it contains the word "sun" using your preferred method.
+
+var containsWordSun = weatherMsg.daily.data.filter(function(item){
+    return item.summary.includes("cloudy") ;  // 'sun' not in data, used cloudy instead.
+});
+
+console.log(containsWordSun);
+
+
+// Using the appropriate array method, start with the hourly data and figure out what will be the hottest temperature today. 
+// As a hint, notice that you will need to visit each item in turn, but also keep track of a separate value.
+
