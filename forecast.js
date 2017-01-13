@@ -1544,6 +1544,19 @@ console.log(listOfTemp);
 
 
 
+// Using a chain of two array methods, start with the hourly data and return an array of Date objects saying when it will rain. To do this, you'll have to:
+// Eliminate any item where it is not raining.
+// Extract the time from the remaining items and create a Date object
 
 
+var willRain = weatherMsg.hourly.data.filter(function(item){
+    return item.summary === "Rain";
+}).map(function(item){
+    return new Date(item.time);
+})
 
+console.log(willRain);
+
+
+// Using the appropriate array method, start with the daily data and figure out whether it will be sunny every day of the week. 
+// Use the summary and check if it contains the word "sun" using your preferred method.
